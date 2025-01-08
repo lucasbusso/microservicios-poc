@@ -8,10 +8,10 @@ import java.util.List;
 
 public class CustomersMockData {
     private static final List<Customer> CUSTOMERS = new ArrayList<>(Arrays.asList(
-            new Customer(1, "John Doe 1", "jdoe", "password"),
-            new Customer(2, "Jane Doe 2", "janedoe", "password"),
-            new Customer(3, "Jane Doe 3", "janedoe", "password"),
-            new Customer(4, "Jane Doe 4", "janedoe", "password")
+            new Customer(1, "John Doe 1", "rulo", "password"),
+            new Customer(2, "Jane Doe 2", "juan", "password"),
+            new Customer(3, "Jane Doe 3", "yoel", "password"),
+            new Customer(4, "Jane Doe 4", "lucas", "password")
     ));
 
     public static List<Customer> getCustomers() {
