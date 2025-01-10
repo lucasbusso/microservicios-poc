@@ -25,4 +25,10 @@ public class CustomerRestController {
        return null;
     }
 
+    @PostMapping("/customers")
+    public Customer postCustomer(@RequestBody Customer customerAdded) {
+      CUSTOMERS.add(customerAdded);
+        return customerAdded;
+    }
+
 }
