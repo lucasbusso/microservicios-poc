@@ -44,4 +44,14 @@ public class CustomerRestController {
         return null;
     }
 
+    @DeleteMapping("/customers/{id}")
+    public Customer deleteCustomer(@PathVariable int id) {
+        for(Customer item : CUSTOMERS) {
+            if(item.getId() == id) {
+                CUSTOMERS.remove(item);
+                return item;
+            }
+        }
+        return null;
+    }
 }
