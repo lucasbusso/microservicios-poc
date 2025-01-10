@@ -54,4 +54,23 @@ public class CustomerRestController {
         }
         return null;
     }
+
+    @PatchMapping("/customers/{id}")
+    public Customer patchCustomer(@RequestBody Customer customerUpdated, @PathVariable int id) {
+        for(Customer item : CUSTOMERS ) {
+            if(item.getId() == id) {
+                if(customerUpdated.getUserName() != null) {
+                    item.setUserName(customerUpdated.getUserName());
+                }
+                if(customerUpdated.getPassword() != null) {
+                    item.setPassword(customerUpdated.getPassword());
+                }
+                if(customerUpdated.getName() != null) {
+                    item.setName(customerUpdated.getName());
+                }
+                return item;
+            }
+        }
+        return null;
+    }
 }
